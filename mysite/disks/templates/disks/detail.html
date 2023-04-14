@@ -1,6 +1,24 @@
 <h1>{{ album.title }}</h1>
-<ul>
-{% for track in album.track_set.all %}
-    <li>{{track.name}}</li>
-{% endfor %}
-</ul>
+
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Composer</th>
+        <th>Milliseconds</th>
+        <th>Bytes</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in album.track_set.all %} 
+      <tr>
+        <th> <li>{{track.name}}</li></th>
+        <th> <li>{{track.composer}}</li></th>
+        <th> <li>{{track.milliseconds}}</li></th>
+        <th> <li>{{track.bytes}}</li></th>
+        <th> <li>{{track.unitPrice}}</li></th>
+      </tr>
+    {% endfor %}
+    </tbody>
+</table>
