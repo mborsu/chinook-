@@ -13,11 +13,11 @@
     <tbody>
     {% for track in album.track_set.all %} 
       <tr>
-        <th> <li>{{track.name}}</li></th>
-        <th> <li>{{track.composer}}</li></th>
-        <th> <li>{{track.milliseconds}}</li></th>
-        <th> <li>{{track.bytes}}</li></th>
-        <th> <li>{{track.unitPrice}}</li></th>
+        <th> {{track.name}}</th>
+        <th> {{track.composer}}</th>
+        <th> {{track.milliseconds}}</th>
+        <th> {{track.bytes}}</th>
+        <th> {{track.unitPrice}}</th>
       </tr>
     {% endfor %}
     </tbody>
